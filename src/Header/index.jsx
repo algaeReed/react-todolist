@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { PropTypes } from "prop-types";
 import { nanoid } from "nanoid";
 
 export default class Header extends Component {

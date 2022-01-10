@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -11,14 +11,17 @@ export default class Fotter extends Component {
     todos: [{ id: 1, name: "aaa", done: false }],
   };
   componentDidMount = () => {
-    const { todos } = this.state;
+    // const { todos } = this.state;
     console.log("componentDidMount");
     const t = localStorage.getItem("todos");
-    const newTodos = JSON.parse(t).map((item) => {
-      return item;
-    });
-
-    this.setState({ todos: newTodos });
+    if(t&&t.length>0){
+      const newTodos = JSON.parse(t).map((item) => {
+        return item;
+      });
+  
+      this.setState({ todos: newTodos });
+    }
+  
     // console.log(JSON.parse(this.state.todos));
     // let obj = [{ id: 1, name: "aaaaa", done: false }];
     // localStorage.setItem("todos", JSON.stringify(obj));

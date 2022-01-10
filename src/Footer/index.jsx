@@ -11,7 +11,7 @@ export default class Fotter extends Component {
     this.props.clearAllDone();
   };
   render() {
-    const { todos, clearAllDone } = this.props;
+    const { todos } = this.props;
     const doneCount = todos.reduce((pre, current) => {
       return pre + (current.done ? 1 : 0);
     }, 0);
