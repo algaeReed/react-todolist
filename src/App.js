@@ -105,7 +105,7 @@ export default class Fotter extends Component {
     const { todos } = this.state;
 
     return (
-      <div>
+      <div className="mx-auto  w-6/12 h-auto p-6 mt-10 shadow-md ">
         <Header className="header" insertTodo={this.insertTodo}></Header>
         <List
           className="list"

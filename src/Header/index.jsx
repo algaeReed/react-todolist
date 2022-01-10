@@ -16,8 +16,9 @@ export default class Header extends Component {
     return (
       <div>
         <input
+          className="w-96"
           type="text"
-          placeholder="请输入"
+          placeholder="点击请输入，键入Enter确认"
           onKeyUp={this.handKeyup}
         ></input>
       </div>

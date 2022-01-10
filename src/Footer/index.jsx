@@ -29,7 +29,12 @@ export default class Fotter extends Component {
           ></input>
         </label>
         <span>已经完成{doneCount}</span>/<span>全部{totalCount}</span>
-        <button onClick={this.handleClearAllDone}>Clear All</button>
+        <button
+          className="border-2 border-gray-200-gray-300 border-solid px-4 rounded-xl"
+          onClick={this.handleClearAllDone}
+        >
+          Clear All
+        </button>
       </div>
     );
   }

@@ -44,13 +44,16 @@ export default class Item extends Component {
         onMouseLeave={this.handleMouse(false)}
         onMouseEnter={this.handleMouse(true)}
       >
-        <label>
-          <input
-            type="checkbox"
-            checked={done}
-            onChange={this.handleCheck(id)}
-          />
-          <span> {name}</span>
+        <div className="flex  justify-content space-between align-items">
+          <label>
+            <input
+              type="checkbox"
+              checked={done}
+              onChange={this.handleCheck(id)}
+            />
+            <span> {name}</span>
+          </label>
+
           <button
             style={{ display: mouse ? "block" : "none" }}
             onClick={() => {
@@ -59,7 +62,7 @@ export default class Item extends Component {
           >
             删除
           </button>
-        </label>
+        </div>
       </li>
     );
   }
