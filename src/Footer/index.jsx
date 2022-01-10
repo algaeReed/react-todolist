@@ -18,7 +18,7 @@ export default class Fotter extends Component {
 
     const totalCount = todos.length;
     return (
-      <div>
+      <div className="mt-4 text-gray-500">
         <label>
           <input
             type="checkbox"
@@ -30,7 +30,7 @@ export default class Fotter extends Component {
         </label>
         <span>已经完成{doneCount}</span>/<span>全部{totalCount}</span>
         <button
-          className="border-2 border-gray-200-gray-300 border-solid px-4 rounded-xl"
+          className="border-2 border-gray-200-gray-300 border-solid px-4 rounded-xl ml-4"
           onClick={this.handleClearAllDone}
         >
           Clear All
