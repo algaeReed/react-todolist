@@ -8,7 +8,24 @@ export default class Header extends Component {
     if (target.value.trim() === "") return alert("输入不能为空");
     console.log(target.value);
 
-    let dataTodo = { id: nanoid(), name: target.value, done: false };
+    let dataTodo = {
+      id: nanoid(),
+      name: target.value,
+      done: false,
+      time:
+        new Date().getFullYear() +
+        "-" +
+        new Date().getMonth() +
+        1 +
+        "-" +
+        new Date().getDate() +
+        "   " +
+        new Date().getHours() +
+        ":" +
+        new Date().getMinutes(),
+    };
+
+    console.log(dataTodo);
     this.props.insertTodo(dataTodo);
     target.value = "";
   };

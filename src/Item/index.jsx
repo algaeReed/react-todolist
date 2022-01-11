@@ -35,7 +35,7 @@ export default class Item extends Component {
   };
 
   render() {
-    const { id, name, done } = this.props;
+    const { id, name, done, time } = this.props;
     const { mouse } = this.state;
     console.log(name);
     return (
@@ -53,7 +53,7 @@ export default class Item extends Component {
             />
             <span> {name}</span>
           </label>
-
+          {time}
           <button
             style={{ display: mouse ? "block" : "none" }}
             onClick={() => {
