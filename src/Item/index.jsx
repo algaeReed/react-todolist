@@ -43,25 +43,31 @@ export default class Item extends Component {
         style={{ backgroundColor: mouse ? "#ddd" : "white" }}
         onMouseLeave={this.handleMouse(false)}
         onMouseEnter={this.handleMouse(true)}
+        className="h-8 leading-8 "
       >
-        <div className="flex  justify-content space-between align-items">
-          <label>
-            <input
-              type="checkbox"
-              checked={done}
-              onChange={this.handleCheck(id)}
-            />
-            <span> {name}</span>
-          </label>
-          {time}
-          <button
-            style={{ display: mouse ? "block" : "none" }}
-            onClick={() => {
-              this.handleClick(id);
-            }}
-          >
-            删除
-          </button>
+        <div className="flex ">
+          <div className="flex w-3/5  ">
+            <label>
+              <input
+                type="checkbox"
+                checked={done}
+                onChange={this.handleCheck(id)}
+              />
+            </label>
+            <span className="ml-4 "> {name}</span>
+          </div>
+
+          <div className="flex justify-around  w-2/5  ">
+            <span> {time}</span>
+            <button
+              className=" opacity-0  hover:opacity-100 bg-gray-400 px-4 rounded text-blue-200 "
+              onClick={() => {
+                this.handleClick(id);
+              }}
+            >
+              删除
+            </button>
+          </div>
         </div>
       </li>
     );

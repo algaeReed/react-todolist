@@ -22,7 +22,9 @@ export default class Header extends Component {
         "   " +
         new Date().getHours() +
         ":" +
-        new Date().getMinutes(),
+        new Date().getMinutes() +
+        ":" +
+        new Date().getSeconds(),
     };
 
     console.log(dataTodo);

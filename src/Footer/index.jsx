@@ -28,7 +28,8 @@ export default class Fotter extends Component {
             onChange={this.handleCheckAllDone}
           ></input>
         </label>
-        <span>已经完成{doneCount}</span>/<span>全部{totalCount}</span>
+        <span className="pl-2">已经完成{doneCount}</span>/
+        <span>全部{totalCount}</span>
         <button
           className="border-2 border-gray-200-gray-300 border-solid px-4 rounded-xl ml-4"
           onClick={this.handleClearAllDone}
