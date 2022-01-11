@@ -14,9 +14,9 @@ export default class Header extends Component {
   };
   render() {
     return (
-      <div>
+      <div className="w-full">
         <input
-          className="w-96"
+          className="w-full h-10"
           type="text"
           placeholder="点击请输入，键入Enter确认"
           onKeyUp={this.handKeyup}
